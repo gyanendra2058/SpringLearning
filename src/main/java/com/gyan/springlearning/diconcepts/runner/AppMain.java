@@ -10,5 +10,6 @@ public class AppMain {
         Quest mockQuest = new SlayDragonQuest();
         Knight knight = new BraveKnight(mockQuest);
         knight.embarkQuest();
+        System.out.println("test");
     }
 }
