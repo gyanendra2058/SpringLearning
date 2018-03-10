@@ -2,12 +2,19 @@ package com.gyan.springlearning.diconcepts.impl;
 
 import com.gyan.springlearning.diconcepts.interfaces.Quest;
 
+import java.io.PrintStream;
 import java.util.logging.Logger;
 
 public class SlayDragonQuest implements Quest {
-    Logger logger = Logger.getLogger(SlayDragonQuest.class.getName());
+
+    private PrintStream stream;
+
+    public SlayDragonQuest(PrintStream stream) {
+        this.stream = stream;
+    }
+
 
     public void emabark() {
-        logger.info("SlayDragon quest is being embarked!");
+        stream.println("Slay dragon emabark");
     }
 }
