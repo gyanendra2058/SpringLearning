@@ -9,8 +9,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class AppMain {
     public static void main(String[] args){
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("appContext.xml");
+        ClassPathXmlApplicationContext  applicationContext = new ClassPathXmlApplicationContext("appContext.xml");
         Knight knight = applicationContext.getBean(Knight.class);
         knight.embarkQuest();
+        applicationContext.close();
     }
 }

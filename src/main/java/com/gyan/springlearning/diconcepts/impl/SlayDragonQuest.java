@@ -7,6 +7,14 @@ import java.util.logging.Logger;
 
 public class SlayDragonQuest implements Quest {
 
+    public PrintStream getStream() {
+        return stream;
+    }
+
+    public void setStream(PrintStream stream) {
+        this.stream = stream;
+    }
+
     private PrintStream stream;
 
     public SlayDragonQuest(PrintStream stream) {
