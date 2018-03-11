@@ -7,9 +7,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="knight" class="com.gyan.springlearning.diconcepts.impl.BraveKnight">
-        <constructor-arg index="0" ref="quest"/>
-        <constructor-arg index="1" ref="minstrel"/>
+    <bean id="minstrel" class="com.gyan.springlearning.diconcepts.impl.BraveKnightMinstrel">
+        <constructor-arg value="#{T(System).out}"/>
     </bean>
 
 </beans>
