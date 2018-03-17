@@ -1,13 +1,13 @@
 package com.gyan.springlearning.beanwiring.runner;
 
-import com.gyan.springlearning.beanwiring.configuration.CDPlayerConfig;
-import com.gyan.springlearning.beanwiring.interfaces.CompactDisc;
+import com.gyan.springlearning.beanwiring.impl.CDPlayerJC;
+import com.gyan.springlearning.beanwiring.javabasedconfig.CDPlayerJavaPlusAutoConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class ApplicationMain {
     public static void main(String[] args){
-        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(CDPlayerConfig.class);
-        CompactDisc compactDisc = (CompactDisc)ctx.getBean("someRandomBeanIDForTesting");
-        compactDisc.play();
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(CDPlayerJavaPlusAutoConfig.class);
+        CDPlayerJC cdPlayerJC = (CDPlayerJC)ctx.getBean("cdPlayerHybridBean");
+        cdPlayerJC.play();
     }
 }

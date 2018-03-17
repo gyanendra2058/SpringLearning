@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackageClasses = {CompactDiscBeanDiscoveryIF.class})
-public class CDPlayerJavaConfig2 {
+public class CDPlayerJavaPlusAutoConfig {
     @Autowired
     private CompactDisc cd;
 

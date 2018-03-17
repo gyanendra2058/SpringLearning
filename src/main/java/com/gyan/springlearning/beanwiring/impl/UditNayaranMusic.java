@@ -1,4 +1,10 @@
 package com.gyan.springlearning.beanwiring.impl;
 
-public class UditNayaranMusic {
+import com.gyan.springlearning.beanwiring.interfaces.CompactDisc;
+
+public class UditNayaranMusic implements CompactDisc {
+
+    public void play() {
+        System.out.println("Raaz songs");
+    }
 }
